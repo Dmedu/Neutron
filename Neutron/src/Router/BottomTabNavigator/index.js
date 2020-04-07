@@ -38,9 +38,9 @@ class BottomTab extends React.Component{
                     }
                 }}
             >
-                {BottomTabNavigatorRouter.map((item, index) => {
-                    console.log(item);
-                    return <Tab.Screen 
+                {BottomTabNavigatorRouter.map((item, index,arr) => {
+                    return <Tab.Screen
+                                key={index}
                                 name={item.name} 
                                 component={item.component}
                                 options={item.options}
